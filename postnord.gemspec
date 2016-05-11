@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["stefan.ahman@apoex.se"]
 
   spec.summary       = %q{A gem for Postnord's API}
-  spec.homepage      = 'https://github.com/apoex/postnord'
+  spec.homepage      = 'https://github.com/apoex/postnord-gem'
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
