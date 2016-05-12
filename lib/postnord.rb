@@ -1,5 +1,11 @@
-require "postnord/version"
+require 'uri'
+require 'net/http'
+require 'net/https'
+require 'json'
+require 'openssl'
+require 'byebug'
 
-module Postnord
-  # Your code goes here...
-end
+require 'postnord/client'
+require 'postnord/base'
+require 'postnord/shipment'
+require 'postnord/version'
