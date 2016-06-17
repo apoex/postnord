@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["stefan.ahman@apoex.se"]
 
   spec.summary       = %q{A gem for Postnord's API}
-  spec.homepage      = 'https://github.com/apoex/postnord-gem'
+  spec.homepage      = 'https://github.com/apoex/postnord'
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
