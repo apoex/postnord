@@ -28,7 +28,7 @@ module Postnord
         http.request(req)
       end
 
-      JSON.parse(res.body)
+      Response.new(res)
     end
 
     private

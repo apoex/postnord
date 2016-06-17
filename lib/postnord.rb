@@ -6,6 +6,7 @@ require 'openssl'
 require 'byebug'
 
 require 'postnord/client'
+require 'postnord/response'
 require 'postnord/base'
 require 'postnord/shipment'
 require 'postnord/version'
