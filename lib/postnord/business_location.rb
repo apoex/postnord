@@ -2,7 +2,7 @@ module Postnord
 
   # Classes
 
-  class BusinessLocation
+  class BusinessLocation < Base
     def self.service
       'businesslocation'
     end
