@@ -12,7 +12,7 @@ module Postnord
     end
   end
 
-  class GetTransitTimeInformation
+  class GetTransitTimeInformation < Transport
     def mandatory_params
       [
         'serviceGroupCode',

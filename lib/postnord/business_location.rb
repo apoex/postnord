@@ -12,7 +12,7 @@ module Postnord
     end
   end
 
-  class FindNearestByCoordinates
+  class FindNearestByCoordinates < BusinessLocation
     def mandatory_params
       [
         'countryCode',
@@ -22,7 +22,7 @@ module Postnord
     end
   end
 
-  class FindByPostalCode
+  class FindByPostalCode < BusinessLocation
     def mandatory_params
       [
         'countryCode',
@@ -31,7 +31,7 @@ module Postnord
     end
   end
 
-  class FindNearestByAddress
+  class FindNearestByAddress < BusinessLocation
     def mandatory_params
       [
         'countryCode',
@@ -39,7 +39,7 @@ module Postnord
     end
   end
 
-  class GetServicePointInformation
+  class GetServicePointInformation < BusinessLocation
     def mandatory_params
       []
     end
