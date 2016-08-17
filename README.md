@@ -32,8 +32,6 @@ POSTNORD_LOCALE = 'en' # default
 POSTNORD_RETURN_TYPE = 'json' # default
 ```
 
-```
-
 How to fetch a package with the test identifier from [developer documentation](https://developer.postnord.com/docs#!/trackandtrace/findByIdentifier) using a helper method:
 
 ```ruby
