@@ -4,6 +4,7 @@ require 'net/https'
 require 'json'
 require 'openssl'
 
+require 'postnord/config'
 require 'postnord/client'
 require 'postnord/response'
 require 'postnord/base'
