@@ -7,7 +7,7 @@ module Postnord
     end
 
     def code
-      @data.code      
+      @data.code
     end
 
     def status
@@ -15,11 +15,9 @@ module Postnord
     end
 
     def data
-      if @code == "200"
-        JSON.parse(@data.body)
-      else
-        @data.body
-      end
+      JSON.parse(@data.body)
+    rescue JSON::ParserError
+      @data.body
     end
 
     def to_h
@@ -27,7 +25,7 @@ module Postnord
         code: @code,
         status: @status,
         data: data,
-      }  
+      }
     end
   end
 end
