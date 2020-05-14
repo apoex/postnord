@@ -6,7 +6,7 @@ module Postnord
     end
 
     def code
-      @data.code
+      @data.status
     end
 
     def data
