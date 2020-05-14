@@ -1,12 +1,10 @@
 module Postnord
   class Response
+    attr_reader :code
+
     def initialize(data)
       @data = data
       @code = data.status
-    end
-
-    def code
-      @data.code
     end
 
     def data
@@ -17,7 +15,7 @@ module Postnord
 
     def to_h
       {
-        code: @code,
+        code: code,
         data: data,
       }
     end
