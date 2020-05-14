@@ -3,15 +3,10 @@ module Postnord
     def initialize(data)
       @data = data
       @code = data.status
-      @status = data.msg
     end
 
     def code
       @data.code
-    end
-
-    def status
-      @data.status
     end
 
     def data
@@ -23,7 +18,6 @@ module Postnord
     def to_h
       {
         code: @code,
-        status: @status,
         data: data,
       }
     end
