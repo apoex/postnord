@@ -6,7 +6,7 @@ module Postnord
     end
 
     def code
-      @data.status
+      @code
     end
 
     def data
@@ -17,7 +17,7 @@ module Postnord
 
     def to_h
       {
-        code: @code,
+        code: code,
         data: data,
       }
     end
