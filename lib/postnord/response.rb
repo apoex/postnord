@@ -2,7 +2,7 @@ module Postnord
   class Response
     def initialize(data)
       @data = data
-      @code = data.code
+      @code = data.status
       @status = data.msg
     end
 
