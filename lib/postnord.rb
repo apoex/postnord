@@ -1,6 +1,5 @@
+require 'faraday'
 require 'uri'
-require 'net/http'
-require 'net/https'
 require 'json'
 require 'openssl'
 

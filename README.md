@@ -37,7 +37,6 @@ How to fetch a package with the test identifier from [developer documentation](h
 ```ruby
 > response = Postnord.find_by_identifier('84971563697SE')
 > response.code # => 200
-> response.status # => OK
 > response.data # => {"TrackingInformationResponse"=>{"shipments"=>[]}}
 ```
 
