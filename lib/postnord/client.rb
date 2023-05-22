@@ -6,7 +6,11 @@ module Postnord
       @api_key      = options[:api_key]      || Config.api_key
       @api_endpoint = options[:api_endpoint] || Config.api_endpoint
       @locale       = options[:locale]       || Config.locale
-      @return_type  = options[:return_type]  || Config.return_type
+      @return_type  = if options.has_key?(:return_type)
+        options[:return_type]
+      else
+        Config.return_type
+      end
     end
 
     def do_request(service, endpoint, params={})
@@ -27,13 +31,13 @@ module Postnord
     private
 
     def build_uri(service, endpoint)
-      URI(
-        @api_endpoint +
-        '/' + service +
-        '/' + @api_version +
-        '/' + endpoint +
-        '.' + @return_type
-      )
+      url = @api_endpoint +
+      "/" + service +
+      "/" + @api_version +
+      "/" + endpoint
+      url += "." + @return_type if @return_type
+
+      URI(url)
     end
   end
 end

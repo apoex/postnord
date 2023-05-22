@@ -9,7 +9,7 @@ module Postnord
     end
 
     def self.client
-      @client ||= Client.new
+      @client ||= Client.new(options)
     end
 
     private
@@ -23,15 +23,19 @@ module Postnord
     end
 
     def self.action
-      self.name.split('::').last.tap { |e| e[0] = e[0].downcase }
+      self.name.split("::").last.tap { |e| e[0] = e[0].downcase }
     end
 
     def self.mandatory_params
-      fail NotImplementedError, 'mandatory_params'
+      fail NotImplementedError, "mandatory_params"
     end
 
     def self.endpoint
-      fail NotImplementedError, 'endpoint'
+      fail NotImplementedError, "endpoint"
+    end
+
+    def self.options
+      {}
     end
   end
 end
